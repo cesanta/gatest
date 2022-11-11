@@ -6,4 +6,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: echo hello
-    - run: curl -sL http://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz -o /tmp/a.tgz && tar -xzf /tmp/a.tgz && ls -l
+    - run: curl -sLO http://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz && tar -xzf *.xz && rm *.xz
