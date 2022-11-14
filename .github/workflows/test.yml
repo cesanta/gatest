@@ -5,6 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: sudo apt update ; sudo apt install xz-utils
-    - run: curl -sL http://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz | unxz | tar -xf -
-    - run: ls -l
+    - run: docker run --rm mdashnet/s390 ls -l
