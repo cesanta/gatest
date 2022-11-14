@@ -1,8 +1,8 @@
 name: build
 on: [push, pull_request]
 jobs:
-  Linux:
+  test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: docker run --rm mdashnet/s390 ls -l
+    - run: docker run --platform linux/s390x --rm mdashnet/s390 ls -l
